@@ -1,0 +1,8 @@
+<Project>
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.targets', '$(MSBuildThisFileDirectory)../'))" />
+
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Shims\Nullable.cs" Visible="false" />
+  </ItemGroup>
+
+</Project>

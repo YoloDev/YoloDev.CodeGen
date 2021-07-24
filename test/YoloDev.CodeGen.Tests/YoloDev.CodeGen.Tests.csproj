@@ -1,0 +1,5 @@
+<Project Sdk="YoloDev.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\YoloDev.CodeGen\YoloDev.CodeGen.csproj" />
+  </ItemGroup>
+</Project>
