@@ -8,7 +8,7 @@ namespace YoloDev.CodeGen.Tests
         [Fact]
         public void Test()
         {
-            var builder = new CodeBuilder();
+            var builder = new CodeWriter();
             builder.AppendFormat("foo{0}bar\n{1}baz", "\n", "oy");
 
             using (builder.Indent())
@@ -25,7 +25,7 @@ namespace YoloDev.CodeGen.Tests
         [Fact]
         public void Test2()
         {
-            var builder = new CodeBuilder();
+            var builder = new CodeWriter();
             using (builder.Block("namespace Foo"))
             {
                 using (builder.Block("class Bar"))
@@ -41,7 +41,7 @@ namespace YoloDev.CodeGen.Tests
         [Fact]
         public void Test3()
         {
-            var builder = new CodeBuilder(2);
+            var builder = new CodeWriter(2);
             using (builder.Block("namespace Foo"))
             {
                 using (builder.Block("class Bar"))

@@ -1,0 +1,15 @@
+<Project Sdk="YoloDev.Sdk">
+
+  <PropertyGroup>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Collections.Immutable" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\YoloDev.CodeGen\YoloDev.CodeGen.csproj" />
+  </ItemGroup>
+
+</Project>

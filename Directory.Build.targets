@@ -1,1 +1,7 @@
-<Project />
+<Project>
+
+  <PropertyGroup Condition=" '$(IsSourceGeneratorProject)' == 'true' ">
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+  </PropertyGroup>
+
+</Project>

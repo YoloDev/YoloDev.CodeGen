@@ -1,0 +1,7 @@
+<Project Sdk="YoloDev.Sdk.RoslynAnalyzer">
+
+  <PropertyGroup>
+    <IsSourceGeneratorProject>true</IsSourceGeneratorProject>
+  </PropertyGroup>
+
+</Project>

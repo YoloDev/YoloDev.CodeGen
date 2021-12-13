@@ -5,17 +5,17 @@ namespace YoloDev.CodeGen
         // Sentinel fixed-length arrays eliminate the need for a "count" field keeping this
         // struct down to just 4 fields. These are only used for their "Length" property,
         // that is, their elements are never set or referenced.
-        private static readonly object?[] _oneArgArray = new object?[1];
-        private static readonly object?[] _twoArgArray = new object?[2];
-        private static readonly object?[] _threeArgArray = new object?[3];
+        static readonly object?[] _oneArgArray = new object?[1];
+        static readonly object?[] _twoArgArray = new object?[2];
+        static readonly object?[] _threeArgArray = new object?[3];
 
-        private readonly object? _arg0;
-        private readonly object? _arg1;
-        private readonly object? _arg2;
+        readonly object? _arg0;
+        readonly object? _arg1;
+        readonly object? _arg2;
 
         // After construction, the first three elements of this array will never be accessed
         // because the indexer will retrieve those values from arg0, arg1, and arg2.
-        private readonly object?[] _args;
+        readonly object?[] _args;
 
         public ParamsArray(object? arg0)
         {
@@ -56,11 +56,15 @@ namespace YoloDev.CodeGen
             _args = args;
         }
 
-        public int Length => _args.Length;
+        public int Length
+            => _args.Length;
 
-        public object? this[int index] => index == 0 ? _arg0 : GetAtSlow(index);
+        public object? this[int index]
+            => index == 0
+            ? _arg0
+            : GetAtSlow(index);
 
-        private object? GetAtSlow(int index)
+        object? GetAtSlow(int index)
         {
             if (index == 1)
                 return _arg1;

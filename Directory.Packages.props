@@ -1,6 +1,8 @@
 <Project>
 
   <ItemGroup>
+    <PackageVersion Include="Microsoft.Bcl.HashCode" Version="1.1.1" />
+    <PackageVersion Include="System.Collections.Immutable" Version="5.0.0" />
     <PackageVersion Include="System.Memory" Version="4.5.4" />
   </ItemGroup>
 

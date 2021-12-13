@@ -3,6 +3,13 @@
 
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Shims\Nullable.cs" Visible="false" />
+    <Compile Include="$(MSBuildThisFileDirectory)Shims\Index.cs" Visible="false" />
+    <Compile Include="$(MSBuildThisFileDirectory)Shims\Range.cs" Visible="false" />
+    <Compile Include="$(MSBuildThisFileDirectory)Shims\InterpolatedStrings.cs" Visible="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Bcl.HashCode" />
   </ItemGroup>
 
 </Project>

@@ -14,7 +14,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{102B1470-CAEA-418C-ABDE-E49FEA98B5D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoloDev.CodeGen.Tests", "test\YoloDev.CodeGen.Tests\YoloDev.CodeGen.Tests.csproj", "{61A7363F-7120-421A-A6E8-61E17B0C7C7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoloDev.CodeGen.Tests", "test\YoloDev.CodeGen.Tests\YoloDev.CodeGen.Tests.csproj", "{61A7363F-7120-421A-A6E8-61E17B0C7C7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sourcegen", "sourcegen", "{A754D9E4-26C8-4A28-9B29-839277B82D96}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoloDev.CodeGen.SourceGenerator", "src\sourcegen\YoloDev.CodeGen.SourceGenerator\YoloDev.CodeGen.SourceGenerator.csproj", "{0B088EB1-CCA1-42EB-9FDF-31A83FD3F53B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoloDev.CodeGen.Builders", "src\YoloDev.CodeGen.Builders\YoloDev.CodeGen.Builders.csproj", "{DE2F3DE3-B671-4278-AC6E-C98EB3C0CBB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoloDev.CodeGen.Builders.Tests", "test\YoloDev.CodeGen.Builders.Tests\YoloDev.CodeGen.Builders.Tests.csproj", "{127B13BA-D072-472F-B323-02A6EE6D35F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +38,18 @@ Global
 		{61A7363F-7120-421A-A6E8-61E17B0C7C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61A7363F-7120-421A-A6E8-61E17B0C7C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61A7363F-7120-421A-A6E8-61E17B0C7C7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B088EB1-CCA1-42EB-9FDF-31A83FD3F53B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B088EB1-CCA1-42EB-9FDF-31A83FD3F53B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B088EB1-CCA1-42EB-9FDF-31A83FD3F53B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B088EB1-CCA1-42EB-9FDF-31A83FD3F53B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE2F3DE3-B671-4278-AC6E-C98EB3C0CBB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE2F3DE3-B671-4278-AC6E-C98EB3C0CBB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE2F3DE3-B671-4278-AC6E-C98EB3C0CBB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE2F3DE3-B671-4278-AC6E-C98EB3C0CBB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{127B13BA-D072-472F-B323-02A6EE6D35F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{127B13BA-D072-472F-B323-02A6EE6D35F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{127B13BA-D072-472F-B323-02A6EE6D35F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{127B13BA-D072-472F-B323-02A6EE6D35F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +57,10 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E8417A11-C094-4C57-8B6B-997A64411B86} = {D593846D-CE50-45D3-9FA2-4F3BD2EDC21C}
 		{61A7363F-7120-421A-A6E8-61E17B0C7C7D} = {102B1470-CAEA-418C-ABDE-E49FEA98B5D8}
+		{A754D9E4-26C8-4A28-9B29-839277B82D96} = {D593846D-CE50-45D3-9FA2-4F3BD2EDC21C}
+		{0B088EB1-CCA1-42EB-9FDF-31A83FD3F53B} = {A754D9E4-26C8-4A28-9B29-839277B82D96}
+		{DE2F3DE3-B671-4278-AC6E-C98EB3C0CBB7} = {D593846D-CE50-45D3-9FA2-4F3BD2EDC21C}
+		{127B13BA-D072-472F-B323-02A6EE6D35F0} = {102B1470-CAEA-418C-ABDE-E49FEA98B5D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24FD5F48-EF38-442B-969B-EF04EFB97D04}

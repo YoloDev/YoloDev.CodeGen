@@ -4,6 +4,7 @@
     "rollForward": "latestMajor"
   },
   "msbuild-sdks": {
-    "YoloDev.Sdk": "0.2.21"
+    "YoloDev.Sdk": "0.3.1",
+    "YoloDev.Sdk.RoslynAnalyzer": "0.3.1"
   }
 }
