@@ -16,33 +16,72 @@ public class CodeWriter
     readonly int _indentation = 4;
     readonly StringBuilder _codeWriter;
 
+    /// <summary>
+    /// Create new <see cref="CodeWriter"/> instance.
+    /// </summary>
+    /// <param name="indentation">The number of spaces to add for a single indentation level.</param>
     public CodeWriter(int indentation = 4)
         : this(new StringBuilder(), indentation)
     { }
 
+    /// <summary>
+    /// Create new <see cref="CodeWriter"/> instance.
+    /// </summary>
+    /// <param name="stringBuilder">The <see cref="StringBuilder"/>.</param>
+    /// <param name="indentation">The number of spaces to add for a single indentation level.</param>
     public CodeWriter(StringBuilder stringBuilder, int indentation = 4)
     {
         _codeWriter = stringBuilder;
         _indentation = indentation;
     }
 
+    /// <summary>
+    /// Gets current indentation level.
+    /// </summary>
     public int IndentLevel { get; private set; }
 
+    /// <inheritdoc />
     public override string ToString()
         => _codeWriter.ToString();
 
+    /// <summary>
+    /// Increase indentation.
+    /// </summary>
+    /// <param name="count">The number of levels to increase the indentation by.</param>
+    /// <returns>This instance.</returns>
+    /// <exception cref="ArgumentOutOfRangeException"><paramref name="count"/> is less than or equal to 0.</exception>
     public CodeWriter IncreaseIndent(int count = 1)
     {
+        if (count <= 0)
+            throw new ArgumentOutOfRangeException(nameof(count), "count must be greater than 0.");
+
         IndentLevel += count;
         return this;
     }
 
+    /// <summary>
+    /// Decrease indentation.
+    /// </summary>
+    /// <param name="count">The number of levels to increase the decrease by.</param>
+    /// <returns>This instance.</returns>
+    /// <exception cref="ArgumentOutOfRangeException"><paramref name="count"/> is less than or equal to 0 or greater than <see cref="IndentLevel"/>.</exception>
     public CodeWriter DecreaseIndent(int count = 1)
     {
+        if (count <= 0)
+            throw new ArgumentOutOfRangeException(nameof(count), "count must be greater than 0.");
+
+        if (count > IndentLevel)
+            throw new ArgumentOutOfRangeException(nameof(count), "count must be less than or equal to current indentation level.");
+
         IndentLevel -= count;
         return this;
     }
 
+    /// <summary>
+    /// Append text to the <see cref="CodeWriter"/>.
+    /// </summary>
+    /// <param name="text"></param>
+    /// <returns>This instance.</returns>
     public CodeWriter Append(ReadOnlySpan<char> text)
     {
         foreach (var (value, kind) in text.Lines())
