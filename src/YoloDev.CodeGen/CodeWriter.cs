@@ -102,15 +102,46 @@ public class CodeWriter
         return this;
     }
 
+    /// <summary>
+    /// Append a formatted string.
+    /// </summary>
+    /// <param name="format">The string format.</param>
+    /// <param name="arg0">The first argument.</param>
+    /// <returns>This instance.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="format"/> is <c>null</c>.</exception>
     public CodeWriter AppendFormat(string format, object? arg0)
         => AppendFormatHelper(null, format, new ParamsArray(arg0));
 
+    /// <summary>
+    /// Append a formatted string.
+    /// </summary>
+    /// <param name="format">The string format.</param>
+    /// <param name="arg0">The first argument.</param>
+    /// <param name="arg1">The second argument.</param>
+    /// <returns>This instance.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="format"/> is <c>null</c>.</exception>
     public CodeWriter AppendFormat(string format, object? arg0, object? arg1)
         => AppendFormatHelper(null, format, new ParamsArray(arg0, arg1));
 
+    /// <summary>
+    /// Append a formatted string.
+    /// </summary>
+    /// <param name="format">The string format.</param>
+    /// <param name="arg0">The first argument.</param>
+    /// <param name="arg1">The second argument.</param>
+    /// <param name="arg2">The third argument.</param>
+    /// <returns>This instance.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="format"/> is <c>null</c>.</exception>
     public CodeWriter AppendFormat(string format, object? arg0, object? arg1, object? arg2)
         => AppendFormatHelper(null, format, new ParamsArray(arg0, arg1, arg2));
 
+    /// <summary>
+    /// Append a formatted string.
+    /// </summary>
+    /// <param name="format">The string format.</param>
+    /// <param name="args">The arguments.</param>
+    /// <returns>This instance.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="format"/> or <paramref name="args"/> is <c>null</c>.</exception>
     public CodeWriter AppendFormat(string format, params object?[] args)
     {
         if (args == null)
