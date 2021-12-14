@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.1](https://www.github.com/YoloDev/YoloDev.CodeGen/compare/YoloDev.CodeGen-v0.1.0...YoloDev.CodeGen-v0.1.1) (2021-12-14)
+
+
+### Documentation
+
+* add some documentation ([b400673](https://www.github.com/YoloDev/YoloDev.CodeGen/commit/b4006731067fb2b6a64048e80f9b5b78403f3e4b))
+
 ## 0.1.0 (2021-12-14)
 
 
