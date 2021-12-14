@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PackageReleaseChannel>alpha</PackageReleaseChannel>
   </PropertyGroup>
 
   <ItemGroup>
