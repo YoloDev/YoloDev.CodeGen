@@ -1,7 +1,6 @@
-namespace YoloDev.CodeGen.Builders
+namespace YoloDev.CodeGen.Builders;
+
+public interface ICodeBuilder
 {
-    public interface ICodeBuilder
-    {
-        void Build(CodeWriter writer);
-    }
+    void Build(CodeWriter writer);
 }

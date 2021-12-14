@@ -1,34 +1,27 @@
-﻿namespace YoloDev.CodeGen.Builders.Pools
+namespace YoloDev.CodeGen.Builders.Pools;
+
+sealed partial class ArrayBuilder<T>
 {
-    internal sealed partial class ArrayBuilder<T>
+    /// <summary>
+    /// struct enumerator used in foreach.
+    /// </summary>
+    internal struct Enumerator
     {
-        /// <summary>
-        /// struct enumerator used in foreach.
-        /// </summary>
-        internal struct Enumerator
+        readonly ArrayBuilder<T> _builder;
+        int _index;
+
+        public Enumerator(ArrayBuilder<T> builder)
         {
-            private readonly ArrayBuilder<T> _builder;
-            private int _index;
+            _builder = builder;
+            _index = -1;
+        }
 
-            public Enumerator(ArrayBuilder<T> builder)
-            {
-                _builder = builder;
-                _index = -1;
-            }
+        public T Current => _builder[_index];
 
-            public T Current
-            {
-                get
-                {
-                    return _builder[_index];
-                }
-            }
-
-            public bool MoveNext()
-            {
-                _index++;
-                return _index < _builder.Count;
-            }
+        public bool MoveNext()
+        {
+            _index++;
+            return _index < _builder.Count;
         }
     }
 }

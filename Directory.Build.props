@@ -13,6 +13,11 @@
     <TargetFrameworks Condition="$([MSBuild]::IsOSUnixLike())">net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Roslynator.Analyzers" PrivateAssets="all" IncludeAssets="analyzers" />
+    <PackageReference Include="Roslynator.Formatting.Analyzers" PrivateAssets="all" IncludeAssets="analyzers" />
+  </ItemGroup>
+
   <ItemGroup Condition=" '$(IsTestProject)' == 'true' ">
     <PackageReference Include="FakeItEasy" />
     <PackageReference Include="FakeItEasy.Analyzer.CSharp" PrivateAssets="All" IncludeAssets="build; analyzers" />

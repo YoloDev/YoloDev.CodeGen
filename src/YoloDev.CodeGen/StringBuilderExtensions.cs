@@ -1,23 +1,22 @@
-using System;
+#if NETSTANDARD2_0
 using System.Text;
 
-namespace YoloDev.CodeGen
-{
-#if NETSTANDARD2_0
-    static class StringBuilderExtensions
-    {
-        public static StringBuilder Append(this StringBuilder stringBuilder, ReadOnlySpan<char> span)
-        {
-            unsafe
-            {
-                fixed (char* ptr = span)
-                {
-                    stringBuilder.Append(ptr, span.Length);
-                }
-            }
+namespace YoloDev.CodeGen;
 
-            return stringBuilder;
+static class StringBuilderExtensions
+{
+    public static StringBuilder Append(this StringBuilder stringBuilder, ReadOnlySpan<char> span)
+    {
+        unsafe
+        {
+            fixed (char* ptr = span)
+            {
+                _ = stringBuilder.Append(ptr, span.Length);
+            }
         }
+
+        return stringBuilder;
     }
-#endif
 }
+#endif
+

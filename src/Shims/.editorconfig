@@ -1,0 +1,15 @@
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
+
+[*.cs]
+
+#### .NET Coding Conventions ####
+
+# Default severity for analyzer diagnostics with categories
+dotnet_analyzer_diagnostic.category-Maintainability.severity = none
+dotnet_analyzer_diagnostic.category-Performance.severity = none
+dotnet_analyzer_diagnostic.category-Readability.severity = none
+dotnet_analyzer_diagnostic.category-Redundancy.severity = none
+dotnet_analyzer_diagnostic.category-Style.severity = none
+dotnet_analyzer_diagnostic.category-Usage.severity = none
