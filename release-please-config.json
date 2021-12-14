@@ -1,4 +1,5 @@
 {
+  "bootstrap-sha": "15ff0d525572d7dcbc739a7e1b4ee2e7bae4ecce",
   "plugins": [],
   "release-type": "simple",
   "bump-minor-pre-major": true,
