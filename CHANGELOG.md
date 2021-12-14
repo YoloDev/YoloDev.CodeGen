@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.2](https://www.github.com/YoloDev/YoloDev.CodeGen/compare/YoloDev.CodeGen-v0.1.1...YoloDev.CodeGen-v0.1.2) (2021-12-14)
+
+
+### Documentation
+
+* document some AppendFormat overloads ([508f261](https://www.github.com/YoloDev/YoloDev.CodeGen/commit/508f261e9a662b76bd59ee537a9f9e36fb503ef7))
+
 ### [0.1.1](https://www.github.com/YoloDev/YoloDev.CodeGen/compare/YoloDev.CodeGen-v0.1.0...YoloDev.CodeGen-v0.1.1) (2021-12-14)
 
 
