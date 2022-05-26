@@ -5,7 +5,7 @@
     <PackageVersion Include="Roslynator.Analyzers" Version="4.1.0" />
     <PackageVersion Include="Roslynator.Formatting.Analyzers" Version="4.1.0" />
     <PackageVersion Include="System.Collections.Immutable" Version="6.0.0" />
-    <PackageVersion Include="System.Memory" Version="4.5.4" />
+    <PackageVersion Include="System.Memory" Version="4.5.5" />
   </ItemGroup>
 
   <ItemGroup>
