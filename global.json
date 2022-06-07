@@ -5,6 +5,6 @@
   },
   "msbuild-sdks": {
     "YoloDev.Sdk": "0.5.1",
-    "YoloDev.Sdk.RoslynAnalyzer": "0.5.0"
+    "YoloDev.Sdk.RoslynAnalyzer": "0.5.1"
   }
 }
