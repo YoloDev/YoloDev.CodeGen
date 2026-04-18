@@ -79,13 +79,13 @@ jobs:
         run: dotnet pack --configuration Release --no-build
 
       - name: 🔼 Upload packages as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         with:
           name: nuget
           path: artifacts/nuget/
 
       - name: 🔼 Upload global.json as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7
         with:
           name: global-json
           path: global.json
@@ -112,13 +112,13 @@ jobs:
 
     steps:
       - name: 🔽 Download nuget artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
         with:
           name: nuget
           path: nuget
 
       - name: 🔽 Download global-json artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
         with:
           name: global-json
 
@@ -141,13 +141,13 @@ jobs:
 
     steps:
       - name: 🔽 Download nuget artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
         with:
           name: nuget
           path: nuget
 
       - name: 🔽 Download global-json artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
         with:
           name: global-json
 
