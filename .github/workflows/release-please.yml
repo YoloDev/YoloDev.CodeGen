@@ -64,7 +64,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: 🔽 Install dotnet
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
 
       - name: 🔍 Print dotnet info
         run: dotnet --info
@@ -123,7 +123,7 @@ jobs:
           name: global-json
 
       - name: 🔽 Install dotnet
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
 
       - name: 🔼 Publish package to nuget
         run: dotnet nuget push --force-english-output --api-key '${{ secrets.GITHUB_TOKEN }}' --source 'https://nuget.pkg.github.com/YoloDev/index.json' --skip-duplicate "nuget/*.nupkg"
@@ -152,7 +152,7 @@ jobs:
           name: global-json
 
       - name: 🔽 Install dotnet
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@26b0ec14cb23fa6904739307f278c14f94c95bf1 # v5
 
       - name: 🔼 Publish package to nuget
         run: dotnet nuget push --force-english-output --api-key '${{ secrets.NUGET_API_KEY }}' --source '${{ secrets.NUGET_FEED }}' --skip-duplicate "nuget/*.nupkg"
