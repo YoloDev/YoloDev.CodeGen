@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - id: release
-        uses: GoogleCloudPlatform/release-please-action@v3
+        uses: GoogleCloudPlatform/release-please-action@db8f2c60ee802b3748b512940dde88eabd7b7e01 # v3.7.13
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           command: manifest
@@ -61,10 +61,10 @@ jobs:
 
     steps:
       - name: ⏬ Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3.7.0
 
       - name: 🔽 Install dotnet
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@55ec9447dda3d1cf6bd587150f3262f30ee10815 # v3.4.2
 
       - name: 🔍 Print dotnet info
         run: dotnet --info
@@ -79,20 +79,20 @@ jobs:
         run: dotnet pack --configuration Release --no-build
 
       - name: 🔼 Upload packages as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@c6a366c94c3e0affe28c06c8df20a878f24da3cf # v3.2.2
         with:
           name: nuget
           path: artifacts/nuget/
 
       - name: 🔼 Upload global.json as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@c6a366c94c3e0affe28c06c8df20a878f24da3cf # v3.2.2
         with:
           name: global-json
           path: global.json
 
       - name: 🔼 Upload packages as github release asset
         if: needs.release_please.outputs.upload_url != ''
-        uses: shogo82148/actions-upload-release-asset@v1
+        uses: shogo82148/actions-upload-release-asset@aaba0f56bdbc1071f4af234d5cb16055e8a400de # v1.10.4
         with:
           upload_url: ${{ needs.release_please.outputs.upload_url }}
           asset_path: artifacts/nuget/*
@@ -112,18 +112,18 @@ jobs:
 
     steps:
       - name: 🔽 Download nuget artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@a9bc5e6ef2cb54c177f32aa5726adaa15e7e2d59 # v3.1.0
         with:
           name: nuget
           path: nuget
 
       - name: 🔽 Download global-json artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@a9bc5e6ef2cb54c177f32aa5726adaa15e7e2d59 # v3.1.0
         with:
           name: global-json
 
       - name: 🔽 Install dotnet
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@55ec9447dda3d1cf6bd587150f3262f30ee10815 # v3.4.2
 
       - name: 🔼 Publish package to nuget
         run: dotnet nuget push --force-english-output --api-key '${{ secrets.GITHUB_TOKEN }}' --source 'https://nuget.pkg.github.com/YoloDev/index.json' --skip-duplicate "nuget/*.nupkg"
@@ -141,18 +141,18 @@ jobs:
 
     steps:
       - name: 🔽 Download nuget artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@a9bc5e6ef2cb54c177f32aa5726adaa15e7e2d59 # v3.1.0
         with:
           name: nuget
           path: nuget
 
       - name: 🔽 Download global-json artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@a9bc5e6ef2cb54c177f32aa5726adaa15e7e2d59 # v3.1.0
         with:
           name: global-json
 
       - name: 🔽 Install dotnet
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@55ec9447dda3d1cf6bd587150f3262f30ee10815 # v3.4.2
 
       - name: 🔼 Publish package to nuget
         run: dotnet nuget push --force-english-output --api-key '${{ secrets.NUGET_API_KEY }}' --source '${{ secrets.NUGET_FEED }}' --skip-duplicate "nuget/*.nupkg"
