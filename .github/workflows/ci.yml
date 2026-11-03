@@ -31,22 +31,22 @@ jobs:
           fetch-depth: 0
 
       - name: 🔽 Setup dotnet 2.1
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73 # v6
         with:
           dotnet-version: '2.1.x'
 
       - name: 🔽 Setup dotnet 3.1
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73 # v6
         with:
           dotnet-version: '3.1.x'
 
       - name: 🔽 Setup dotnet 5.0.x
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73 # v6
         with:
           dotnet-version: '5.0.x'
 
       - name: 🔽 Setup dotnet from global.json
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73 # v6
 
       - name: 🔍 Print dotnet info
         run: dotnet --info
